@@ -1,0 +1,23 @@
+<ul class="list">
+  <li *ngFor="let contact of contactsList; let idx=index" class="list-item">
+    <div class="number">
+      <span>{{idx + 1 }}.</span>
+    </div>
+    <div class="contacts">
+      <p class="contacts-text">
+        <span class="contacts-field">Contact name:</span>
+        <span> {{contact.name}}</span>
+      </p>
+      <p class="contacts-text">
+        <span class="contacts-field">Phone number:</span>
+        <span>{{contact.phone}}</span>
+      </p>
+      <p class="contacts-text">
+        <span class="contacts-field">Email:</span> 
+        <span>{{contact.email}}</span>
+      </p>
+      <button type="button" class="delete-btn" (click)="onDeleteContact(contact.id)">Delete Contact</button>
+    </div>
+  </li>
+</ul>
+

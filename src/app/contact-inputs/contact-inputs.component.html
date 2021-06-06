@@ -1,0 +1,25 @@
+<section class="contact-inputs">
+  <div class="box">
+    <form autocomplete="off" class="form" [formGroup]="form">
+      <label class="label">
+        <span>Contact name</span>
+        <input type="text" name="name" placeholder="Enter contact name" autocomplete="off" formControlName="name">
+      </label>
+      <label class="label">
+        <span>Contact phone number</span>
+        <input type="number" name="telephone" placeholder="Enter contact phone number" autocomplete="off" formControlName="phone">
+      </label>
+      <label class="label">
+        <span>Contact email</span>
+        <input type="email" name="email" placeholder="Enter contact email" autocomplete="off" formControlName="email">
+      </label>
+      <button type="submit" class="add-contact" (click)="onAddContact()">Add Contact</button>
+    </form>
+
+    <app-contacts-list 
+    [contactsList]="contactsList"
+    (updatedContactListEvent)="updatedListAfterRemovingContact($event)"
+    ></app-contacts-list>
+
+  </div>
+</section>

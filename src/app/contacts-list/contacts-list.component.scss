@@ -1,0 +1,46 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  list-style: none;
+
+
+  
+  &-item  {
+    display: grid;
+    grid-template-columns: 20px 300px;
+    grid-template-rows: 1fr;
+    border: 2px solid blueviolet;
+    border-radius: 4px;
+    row-gap: 10px;
+    padding: 15px 15px 0 15px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 10px;
+
+  &-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  
+  &-field {
+    font-weight: 700;
+  }
+}
+
+.delete-btn {
+  width: 120px;
+  height: 20px;
+  justify-self: end;
+}
