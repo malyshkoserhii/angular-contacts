@@ -1,0 +1,7 @@
+<app-search-form (imagesEvent)="getImagesArr($event)"></app-search-form>
+
+<ul class="ImageGallery">
+  <li *ngFor="let image of images" class="ImageGalleryItemImage">
+      <img [src]="image.webformatURL" [alt]="image.type" class="ImageGalleryItemImage">
+  </li>
+</ul>
